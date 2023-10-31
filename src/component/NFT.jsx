@@ -57,7 +57,7 @@ function NFT() {
 
     return (
         <div className="">
-            <div className="flex gap-2 p-4 items-center">
+            <div className="flex gap-2 p-4 items-center justify-center">
                 {nftData.map(nft => (
                     <SingleNFT key={nft.id}
                         name={nft.name}

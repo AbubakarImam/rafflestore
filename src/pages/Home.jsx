@@ -1,4 +1,5 @@
 import backgroundImage from '../assets/background.png'
+import NFT from '../component/NFT'
 function Home() {
     return (
         <div>
@@ -9,8 +10,8 @@ function Home() {
                 </div>
                 <p>Every week we pick onchain activities worth celebrating</p>
                 <button className="px-4 py-3">This week hot raffles</button>
-
             </div>
+            <NFT />
         </div>
     )
 }

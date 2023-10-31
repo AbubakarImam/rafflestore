@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import nftData from '../nftData';
 import SingleNFT from './SingleNFT'
 function NFT() {
     const [showNFTs, setShowNFTs] = useState(false);
     const [selectedNFTs, setSelectedNFTs] = useState([]);
     const [selectedStatus, setSelectedStatus] = useState('open');
+    const navigate = useNavigate();
 
     const handleCollectionClick = (nftData) => {
         setSelectedNFTs(nftData);
@@ -32,7 +34,17 @@ function NFT() {
                         {filteredNFTs.map((nft, index) => (
                             <div key={index} className="nft-card rounded border m-4">
                                 <img src={nft.image} alt={nft.name} />
+                                <h3>{nft.title}</h3>
                                 <p>{nft.name}</p>
+                                <div className="flex justify-between items-center p-4">
+                                    <button className="px-2 py-3 bg-white rounded border" onClick={() => navigate("/raffle")}>
+                                        Get Now
+                                    </button>
+                                    <div className="flex flex-col items-center gap-1">
+                                        <h6>Available</h6>
+                                        <p>{nft.unit}/50</p>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -45,7 +57,7 @@ function NFT() {
 
     return (
         <div className="">
-            <div className="flex gap-2 p-4">
+            <div className="flex gap-2 p-4 items-center">
                 {nftData.map(nft => (
                     <SingleNFT key={nft.id}
                         name={nft.name}

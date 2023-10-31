@@ -4,49 +4,49 @@ import dog from './assets/dog.png';
 import newspaper from './assets/newspaper.png';
 import event from './assets/event.png';
 import hat from './assets/hat.png';
-import first from './assets/first.png';
-import second from './assets/second.png';
-import third from './assets/third.png';
-import fourth from './assets/fourth.png';
-import fifth from './assets/fifth.png';
-import sixth from './assets/sixth.png';
-import seventh from './assets/seven.png';
-import eight from './assets/eight.png';
+import first from './assets/first.jpeg';
+import second from './assets/second.jpeg';
+import third from './assets/third.jpeg';
+import fourth from './assets/fourth.jpeg';
+import fifth from './assets/fifth.jpeg';
+import sixth from './assets/sixth.jpeg';
+import seventh from './assets/seven.jpeg';
+import eight from './assets/eight.jpeg';
 import close from './assets/closenft.jpg';
 import defaultnft from './assets/defaultnft.jpg';
 
 const nftData = [
     {
         id: 1,
-        name: "Dog",
+        name: "SharDog Raffles",
         image: dog,
         nft: [
             {
-                name: "META-TK #1", status: "open", unit: 2, image: first
+                title: "SharDog Raffle", name: "META-TK #1", status: "open", unit: 2, image: first
             },
             {
-                name: "META-TK #2", status: "open", unit: 2, image: second
+                title: "SharDog Raffle", name: "META-TK #2", status: "open", unit: 2, image: second
             },
             {
-                name: "META-TK #3", status: "open", unit: 2, image: third
+                title: "SharDog Raffle", name: "META-TK #3", status: "open", unit: 2, image: third
             },
             {
-                name: "META-TK #4", status: "open", unit: 2, image: fourth
+                title: "SharDog Raffle", name: "META-TK #4", status: "open", unit: 2, image: fourth
             },
             {
-                name: "META-TK #5", status: "open", unit: 2, image: fifth
+                title: "SharDog Raffle", name: "META-TK #5", status: "open", unit: 2, image: fifth
             },
             {
-                name: "META-TK #6", status: "open", unit: 2, image: sixth
+                title: "SharDog Raffle", name: "META-TK #6", status: "open", unit: 2, image: sixth
             },
             {
-                name: "META-TK #7", status: "open", unit: 2, image: seventh
+                title: "SharDog Raffle", name: "META-TK #7", status: "open", unit: 2, image: seventh
             },
             {
-                name: "META-TK #8", status: "open", unit: 2, image: eight
+                title: "SharDog Raffle", name: "META-TK #8", status: "open", unit: 2, image: eight
             },
             {
-                name: "META-TK #9", status: "close", unit: 2, image: close
+                title: "SharDog Raffle", name: "META-TK #9", status: "close", unit: 2, image: close
             }
         ]
     },

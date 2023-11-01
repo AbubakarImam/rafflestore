@@ -2,3 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.custom-shadow {
+    box-shadow: 0px 4px 4px 0px #003C8C inset, 0px 4px 4px 0px #003C8C;
+}

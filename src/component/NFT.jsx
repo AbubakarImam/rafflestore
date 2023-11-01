@@ -30,7 +30,7 @@ function NFT() {
                             Closed Raffles
                         </button>
                     </div>
-                    <div className="nft-list grid grid-cols-4">
+                    <div className="nft-list grid grid-cols-2 md:grid-cols-4">
                         {filteredNFTs.map((nft, index) => (
                             <div key={index} className="nft-card rounded border m-4">
                                 <img src={nft.image} alt={nft.name} />
@@ -48,6 +48,9 @@ function NFT() {
                             </div>
                         ))}
                     </div>
+                    <div className="flex justify-center mb-4">
+                        <button className='py-4 bg-[#003C8C] px-6 rounded-xl bg-blue border mx-auto'>More</button>
+                    </div>
                 </div>
             );
         }
@@ -57,7 +60,7 @@ function NFT() {
 
     return (
         <div className="">
-            <div className="flex gap-2 p-4 items-center justify-center">
+            <div className="flex flex-col md:flex-row gap-2 p-4 items-center justify-center">
                 {nftData.map(nft => (
                     <SingleNFT key={nft.id}
                         name={nft.name}

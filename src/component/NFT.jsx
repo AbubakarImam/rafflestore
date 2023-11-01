@@ -41,15 +41,17 @@ function NFT() {
                     </div>
                     <div className="nft-list grid grid-cols-2 md:grid-cols-4">
                         {filteredNFTs.map((nft, index) => (
-                            <div key={index} className="rounded-xl overflow-hidden border m-4">
+                            <div key={index} className="rounded-xl overflow-hidden border m-4 transition-transform transform hover:scale-105">
                                 <div className="h-[60%] w-full">
                                     <img className='h-full w-full' src={nft.image} alt={nft.name} />
                                 </div>
-                                <div className="h-[40%] md:px-2 md:text-left mt:mt-3 pb-2  md:pb-0">
-                                    <h3 className='text-[12px] md:text-[15px] font-bold'>{nft.title}</h3>
-                                    <p className='text-[12px] md:text-[15px] '>{nft.name}</p>
+                                <div className="h-[40%] md:px-2 md:text-left mt:mt-3 pb-2 md:flex md:flex-col justify-between  md:pb-2">
+                                    <div className="">
+                                        <h3 className='text-[12px] md:text-[15px] font-bold'>{nft.title}</h3>
+                                        <p className='text-[12px] md:text-[15px] '>{nft.name}</p>
+                                    </div>
                                     <div className="flex flex-col md:flex-row w-full justify-between items-center px-4 md:px-0">
-                                        <button className="px-4 py-1 bg-white rounded-lg text-center border w-full md:w-[40%] text-[8px] font-bold" onClick={() => navigate("/raffle")}>
+                                        <button className="px-4 py-1 bg-[#003C8C] rounded-lg text-center border w-full md:w-[40%] text-[8px] font-bold" onClick={() => navigate("/raffle")}>
                                             Enter
                                         </button>
                                         <div className="flex flex-col items-center md:gap-1">

@@ -1,10 +1,16 @@
 import thumbnail from "../assets/thumbnail.svg";
 import ellipse from "../assets/ellipse.svg";
 import close from "../assets/close.svg";
-function Form({ closeForm, handleSubmit }) {
+function Form({ closeForm, openBadge }) {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle form submission (you can add your logic here)
+        closeForm(); // Close the form modal
+        openBadge(); // Open the badge modal
+    };
     return (
         <div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 bg-white w-[80%] rounded-xl mx-auto p-4">
                 <div className="flex justify-between">
                     <img src={ellipse} alt="" />
                     <div className="p-1 ml-2 rounded-xl bg-gray-400" onClick={closeForm}><img src={close} alt="" /></div>

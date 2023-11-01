@@ -16,15 +16,16 @@ function RafflePage() {
   const closeForm = () => {
     setIsFormOpen(false);
   }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleClose = () => {
     setIsFormOpen(false);
-    setIsBadgeOpen(true);
+    setIsBadgeOpen(false);
   }
 
   const closeBadge = () => {
     setIsBadgeOpen(false);
+  }
+  const openBadge = () => {
+    setIsBadgeOpen(true);
   }
   return (
     <div className=''>
@@ -59,9 +60,8 @@ function RafflePage() {
             <ol className='p-5 text-sm md:text-[21px]'>
               <p>Prize to win:</p>
               <li>1.10 $NEAR</li>
-              <li>2.Token A ShardDog</li>
-              <li>3.T-shirt</li>
-              <li>4.Mystery Box</li>
+              <li>2.T-shirt</li>
+              <li>3.Mystery Box</li>
             </ol>
           </div>
         </div>
@@ -84,16 +84,16 @@ function RafflePage() {
 
 
         {isFormOpen && (
-          <Modal>
-            <Form onSubmit={handleSubmit} closeForm={closeForm} />
+          <Modal onClose={handleClose} >
+            <Form openBadge={openBadge} closeForm={closeForm} />
           </Modal>
         )}
         {isBadgeOpen && (
-          <BadgeModal
-            onClose={closeBadge}
-            onShare={shareBadge}
-          />
+          <Modal onClose={handleClose}>
+            <BadgeModal onClose={closeBadge} />
+          </Modal>
         )}
+
       </div>
     </div>
   )

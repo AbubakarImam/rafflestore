@@ -27,12 +27,12 @@ function RafflePage() {
     setIsBadgeOpen(false);
   }
   return (
-    <div>
-      <div className="bg-cover bg-center pb-8 flex flex-col w-full items-center justify-center mb-2" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className=''>
+      <div className="bg-cover bg-center pb-8 flex flex-col w-full items-center justify-center mb-8" style={{ backgroundImage: `url(${backgroundImage})` }}>
 
         <img src={week} alt="" />
       </div>
-      <div className=" flex flex-col md:max-w-[60%] mx-auto space-y-4 align-middle items-center  justify-center">
+      <div className=" flex flex-col mx-8 md:max-w-[60%] md:mx-auto gap-6 md:gap-20 align-middle items-center  justify-center">
         <div className=" rounded border-2 py-2 px-4 w-full">
           <h4>ShardDog Raffle</h4>
           <div className='flex items-baseline'>
@@ -40,7 +40,7 @@ function RafflePage() {
             <p> Available for 3 winners</p>
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-4 text-center">
           <p>We would like to give you some free stuff, for your taking action onchain.</p>
           <p>If you have a ShardDog comic #32 and comic #27 you can enter the raffle to win!</p>
         </div>
@@ -68,24 +68,24 @@ function RafflePage() {
 
         <div className="flex flex-col items-center mb-4">
           <button className='py-4 bg-[#003C8C] px-20 rounded-xl bg-blue border' onClick={openForm}>Enter Now</button>
-          <span className='text-xs font-bold'>By continuing, you accept Near Fortune’s <a href="#" className='underline'>terms</a> and <a href="#" className='underline'>privacy</a>.</span>
+          <span className='text-xs font-bold text-center'>By continuing, you accept Near Fortune’s <a href="#" className='underline'>terms</a> and <a href="#" className='underline'>privacy</a>.</span>
         </div>
 
-        <div className="border-t-2 pt-4 flex justify-between w-[60%]">
+        <div className="border-t-2 pt-4 flex justify-between w-[90%] md:[70%]">
           <div className='w-1/2'>
-            <h4>CLOSES</h4>
-            <p>Nov 1, 11:59 PM ET</p>
+            <h4 className='font-bold'>CLOSES</h4>
+            <p className='text-xs'>Nov 1, 11:59 PM ET</p>
           </div>
           <div className='w-1/2'>
-            <h4>ENTRIES</h4>
-            <p>31 Entries</p>
+            <h4 className='font-bold'>ENTRIES</h4>
+            <p className='text-xs'>31 Entries</p>
           </div>
         </div>
 
 
         {isFormOpen && (
-          <Modal onClose={closeForm}>
-            <Form onSubmit={handleSubmit} />
+          <Modal>
+            <Form onSubmit={handleSubmit} closeForm={closeForm} />
           </Modal>
         )}
         {isBadgeOpen && (

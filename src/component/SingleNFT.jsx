@@ -1,21 +1,16 @@
 // SingleNFT.js
 
-import { useState } from 'react';
 
-function SingleNFT({ name, image, nftData, onCollectionClick, onStatusClick, selectedStatus }) {
+function SingleNFT({ name, image, nftData, onCollectionClick }) {
 
-    const [clicked, setClicked] = useState(false);
 
     const handleClick = () => {
-        setClicked(true);
-        onCollectionClick(nftData); // Notify parent component with NFT data
-    }
-    const handleStatusClick = (status) => {
-        setSelectedStatus(status);
+        onCollectionClick(nftData, name); // Notify parent component with NFT data
     }
 
+
     return (
-        <div>
+        <div className='space-y-4 mb-16'>
             <h3>{name}</h3>
             <img src={image} alt={name} onClick={handleClick} />
         </div>

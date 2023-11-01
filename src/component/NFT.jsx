@@ -27,13 +27,13 @@ function NFT() {
                     <h2 className='text-[36px] font-bold mb-5'>{collectionTitle}</h2>
                     <div className="flex items-center justify-center gap-2 ">
                         <button
-                            className={`py-4 px-6 rounded-xl border ${selectedStatus === 'open' ? 'bg-[#003C8C] text-black' : 'bg-white text-black'}`}
+                            className={`py-4 px-6 rounded-xl border ${selectedStatus === 'open' ? 'bg-[#003C8C] text-white' : 'bg-white text-black'}`}
                             onClick={() => handleStatusClick('open')}
                         >
                             New Raffles
                         </button>
                         <button
-                            className={`py-4 px-6 rounded-xl border ${selectedStatus === 'close' ? 'bg-[#003C8C] text-black' : 'bg-white text-black'}`}
+                            className={`py-4 px-6 rounded-xl border ${selectedStatus === 'close' ? 'bg-[#003C8C] text-white' : 'bg-white text-black'}`}
                             onClick={() => handleStatusClick('close')}
                         >
                             Closed Raffles
@@ -51,7 +51,7 @@ function NFT() {
                                         <p className='text-[12px] md:text-[15px] '>{nft.name}</p>
                                     </div>
                                     <div className="flex flex-col md:flex-row w-full justify-between items-center px-4 md:px-0">
-                                        <button className="px-4 py-1 bg-[#003C8C] rounded-lg text-center border w-full md:w-[40%] text-[8px] font-bold" onClick={() => navigate("/raffle")}>
+                                        <button className="px-4 py-1 bg-[#003C8C] rounded-lg text-center border w-full md:w-[40%] text-[8px] text-white font-bold" onClick={() => navigate("/raffle")}>
                                             Enter
                                         </button>
                                         <div className="flex flex-col items-center md:gap-1">

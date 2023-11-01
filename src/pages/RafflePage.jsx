@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import backgroundImage from '../assets/background.png'
 import week from '../assets/weekBanner.png'
 import GiftIcon from '../assets/gift.svg'
@@ -8,6 +8,13 @@ import Modal from '../component/Modal'
 function RafflePage() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isBadgeOpen, setIsBadgeOpen] = useState(false);
+
+  useEffect(() => {
+    const element = document.getElementById('elementID');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   const openForm = () => {
     setIsFormOpen(true);
@@ -28,8 +35,8 @@ function RafflePage() {
     setIsBadgeOpen(true);
   }
   return (
-    <div className=''>
-      <div className="bg-cover bg-center pb-8 flex flex-col w-full items-center justify-center mb-8" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className='min-h-screen overflow-hidden scroll-behavior-none ' id="elementID">
+      <div className="bg-cover bg-center pb-8 flex flex-col w-full items-center mb-8" style={{ backgroundImage: `url(${backgroundImage})` }}>
 
         <img src={week} alt="" />
       </div>

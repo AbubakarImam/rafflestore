@@ -41,20 +41,20 @@ function NFT() {
                     </div>
                     <div className="nft-list grid grid-cols-2 md:grid-cols-4">
                         {filteredNFTs.map((nft, index) => (
-                            <div key={index} className="nft-card rounded-md border m-4">
-                                <div className="h-[60%]">
-                                    <img className='h-full' src={nft.image} alt={nft.name} />
+                            <div key={index} className="rounded-xl overflow-hidden border m-4">
+                                <div className="h-[60%] w-full">
+                                    <img className='h-full w-full' src={nft.image} alt={nft.name} />
                                 </div>
-                                <div className="h-[40%]">
-                                    <h3 className='text-sm md:text-base'>{nft.title}</h3>
-                                    <p className='text-xs md:text-base'>{nft.name}</p>
-                                    <div className="flex flex-col md:flex-row w-full justify-between items-center p-4">
-                                        <button className="px-2 py-1 md:py-3 bg-white rounded-lg border" onClick={() => navigate("/raffle")}>
+                                <div className="h-[40%] md:px-2 md:text-left mt:mt-3 pb-2  md:pb-0">
+                                    <h3 className='text-[12px] md:text-[15px] font-bold'>{nft.title}</h3>
+                                    <p className='text-[12px] md:text-[15px] '>{nft.name}</p>
+                                    <div className="flex flex-col md:flex-row w-full justify-between items-center px-4 md:px-0">
+                                        <button className="px-4 py-1 bg-white rounded-lg text-center border w-full md:w-[40%] text-[8px] font-bold" onClick={() => navigate("/raffle")}>
                                             Enter
                                         </button>
-                                        <div className="flex flex-col items-center gap-1">
-                                            <h6 className='text-xs md:text-base'>Available</h6>
-                                            <p className='text-xs md:text-base'>{nft.unit}/50</p>
+                                        <div className="flex flex-col items-center md:gap-1">
+                                            <h6 className='text-[5px] font-bold'>Available</h6>
+                                            <p className='text-[5px]'>{nft.unit}/50</p>
                                         </div>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@ function NFT() {
                         ))}
                     </div>
                     <div className="flex justify-center mb-4">
-                        <button className='py-4 bg-[#003C8C] px-6 rounded-xl bg-blue border mx-auto'>More</button>
+                        <button className='py-4 bg-[#003C8C] px-6 rounded-xl text-white border mx-auto'>More</button>
                     </div>
                 </div>
             );

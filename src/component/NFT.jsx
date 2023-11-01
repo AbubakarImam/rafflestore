@@ -62,7 +62,7 @@ function NFT() {
                         ))}
                     </div>
                     <div className="flex justify-center mb-4">
-                        <button className='py-4 bg-[#003C8C] px-6 rounded-xl text-white border mx-auto'>More</button>
+                        <button className='py-2 bg-[#003C8C] px-6 rounded-xl text-white border mx-auto'>More</button>
                     </div>
                 </div>
             );

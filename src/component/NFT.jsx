@@ -55,8 +55,8 @@ function NFT() {
                                             Enter
                                         </button>
                                         <div className="flex flex-col items-center md:gap-1">
-                                            <h6 className='text-[5px] font-bold'>Available</h6>
-                                            <p className='text-[5px]'>{nft.unit}/50</p>
+                                            <h6 className='text-[8px] font-bold'>Available</h6>
+                                            <p className='text-[6px]'>{nft.unit}/50</p>
                                         </div>
                                     </div>
                                 </div>
